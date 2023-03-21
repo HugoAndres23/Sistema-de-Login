@@ -144,7 +144,7 @@ async function MostarD(id) {
 async function insertarDatos(dato) {
   const { data, error} = await _supabase.from("users").insert([dato]);
   if (error) {
-    swal("Registro Fallido!", "Este Nombre de Usuario ya existe!", "error");
+    swal("Registro Fallido!", "Verifique los Campos o Este Nombre de Usuario ya existe!", "error");
     MostrarModal_registro();
     return;
   } else {
@@ -171,7 +171,7 @@ function eliminarD(id) {
         console.log(error);
         return;
       }
-      swal("Archivo eliminado","Ha sido eliminado correctamente.","success");
+      swal("Cuenta eliminada","Ha sido eliminada correctamente.","success");
       MostrarModal_user();
       Abrir_login.classList.toggle("hidden");
       btn_user.classList.toggle("hidden");

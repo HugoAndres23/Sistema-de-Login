@@ -46,16 +46,21 @@
         <form id="formulario_login">
           <div class="field">
             <label class="label">Nombre de Usuario : </label>
-            <div class="control">
+            <div class="control has-icons-left">
               <input type="hidden" name="id" id="Id_login">
-              <input class="input" type="text" name="Username" id="username_login" placeholder="Ingresa tu Nombre de Usuario">
+              <input class="input" type="text" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Username" id="username_login" placeholder="Ingresa tu Nombre de Usuario" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>          
             </div>
           </div>
           <div class="field">
             <label class="label">Contraseña : </label>
-            <div class="control">
-              <input class="input" type="password" name="Contraseña" id="contraseña_login"
-                placeholder="Ingresa tu Contraseña">
+            <div class="control has-icons-left">
+              <input class="input" type="password" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Contraseña" id="contraseña_login" placeholder="Ingresa tu Contraseña" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
             </div>
           </div>
       </section>
@@ -71,7 +76,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Registro Nuevo Usuario</p>
+        <p class="modal-card-title">DATOS PERSONALES :</p>
         <button class="delete" aria-label="close" id="cerrar_registro"></button>
       </header>
       <section class="modal-card-body">
@@ -80,38 +85,37 @@
             <label class="label">Nombre : </label>
             <div class="control">
               <input type="hidden" name="id" id="inputId">
-              <input class="input" type="text" name="Nombre" id="nombre" placeholder="Ingresa tus nombres">
+              <input class="input" type="text" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Nombre" id="nombre" placeholder="Ingresa tus nombres" required>
             </div>
           </div>
           <div class="field">
             <label class="label">Apellido : </label>
             <div class="control">
-              <input class="input" type="text" name="Apellido" id="apellido" placeholder="Ingresa tus apellidos">
+              <input class="input" type="text" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Apellido" id="apellido" placeholder="Ingresa tus apellidos" required>
             </div>
           </div>
           <div class="field">
             <label class="label">Edad : </label>
             <div class="control">
-              <input class="input" type="number" name="Edad" id="edad" placeholder="Ingresa tu edad">
+              <input class="input" type="number" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Edad" id="edad" placeholder="Ingresa tu edad" required>
             </div>
           </div>
           <div class="field">
             <label class="label">Ciudad : </label>
             <div class="control ">
-              <input class="input" type="text" name="Ciudad" id="ciudad" placeholder="Ingresa tu ciudad de residencia">
+              <input class="input" type="text" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Ciudad" id="ciudad" placeholder="Ingresa tu ciudad de residencia" required>
             </div>
           </div>
           <div class="field">
             <label class="label">Nombre de Usuario : </label>
             <div class="control ">
-              <input class="input" type="text" name="Username" id="username" placeholder="Ingresa tu Nombre de Usuario">
+              <input class="input" type="text" pattern="[A-Za-z0-9]+" title="Ingrese un nombre válido sin espacios" name="Username" id="username" placeholder="Ingresa tu Nombre de Usuario" required>
             </div>
           </div>
           <div class="field">
             <label class="label">Contraseña : </label>
             <div class="control">
-              <input class="input" type="password" name="Contraseña" id="contraseña"
-                placeholder="Ingresa tu Nueva Contraseña">
+              <input class="input" type="password" pattern="[A-Za-z0-9]+" minlength="8" title="Ingrese un nombre válido sin espacios" name="Contraseña" id="contraseña" placeholder="Ingresa tu Nueva Contraseña" required>
             </div>
           </div>
       </section>
