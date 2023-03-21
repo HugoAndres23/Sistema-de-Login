@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://kit.fontawesome.com/2d691c4e69.js" crossorigin="anonymous"></script>
+  <title>Componentes H | Inicio</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">Componentes H</a>
+      </div>
+      <div class="div_ini">
+        <button class="button is-link is-outlined" id="abrir_login"><i class="fa fa-user"></i><span>Ingreso / Registro</span></button>
+        <button class="button hidden" id="btn_user"><i class="fas fa-user"></i></button>
+      </div>
+    </nav>
+
+    <!-- Imagen Header -->
+    <div class="img-header">
+      <div class="welcome">
+          <h2>¡Bienvenido a Componentes H!</h2>
+          <hr>
+          <p>¡Tu tienda favorita de componentes de ordenador!</p>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="modal" id="modal_login">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Ingreso</p>
+        <button class="delete" aria-label="close" id="cerrar_login"></button>
+      </header>
+      <section class="modal-card-body">
+        <form id="formulario_login">
+          <div class="field">
+            <label class="label">Nombre de Usuario : </label>
+            <div class="control">
+              <input type="hidden" name="id" id="Id_login">
+              <input class="input" type="text" name="Username" id="username_login" placeholder="Ingresa tu Nombre de Usuario">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Contraseña : </label>
+            <div class="control">
+              <input class="input" type="password" name="Contraseña" id="contraseña_login"
+                placeholder="Ingresa tu Contraseña">
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button type="submit" class="button is-success">Iniciar Sesion</button>
+        </form>
+        <button class="button is-link" id="abrir_registro">Registrarse</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal" id="modal_registro">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Registro Nuevo Usuario</p>
+        <button class="delete" aria-label="close" id="cerrar_registro"></button>
+      </header>
+      <section class="modal-card-body">
+        <form id="formulario_registro">
+          <div class="field">
+            <label class="label">Nombre : </label>
+            <div class="control">
+              <input type="hidden" name="id" id="inputId">
+              <input class="input" type="text" name="Nombre" id="nombre" placeholder="Ingresa tus nombres">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Apellido : </label>
+            <div class="control">
+              <input class="input" type="text" name="Apellido" id="apellido" placeholder="Ingresa tus apellidos">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Edad : </label>
+            <div class="control">
+              <input class="input" type="number" name="Edad" id="edad" placeholder="Ingresa tu edad">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Ciudad : </label>
+            <div class="control ">
+              <input class="input" type="text" name="Ciudad" id="ciudad" placeholder="Ingresa tu ciudad de residencia">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Nombre de Usuario : </label>
+            <div class="control ">
+              <input class="input" type="text" name="Username" id="username" placeholder="Ingresa tu Nombre de Usuario">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Contraseña : </label>
+            <div class="control">
+              <input class="input" type="password" name="Contraseña" id="contraseña"
+                placeholder="Ingresa tu Nueva Contraseña">
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button type="submit" class="button is-success">
+          <i class="fas fa-save"></i><span>Guardar</span></button>
+        </form>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal" id="modal_user">
+    <div class="modal-background"></div>
+    <div class="modal-card modal_user">
+      <header class="modal-card-head">
+        <p class="modal-card-title">DATOS PERSONALES : </p>
+        <button class="delete" aria-label="close" id="cerrar_user"></button>
+      </header>
+      <section class="modal-card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Edad</th>
+              <th>Ciudad</th>
+              <th>Nombre de Usuario</th>
+              <th>Contraseña</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody id="table">
+
+          </tbody>
+        </table>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-danger" id="cerrar_sesion">Cerrar Sesion</button>
+      </footer>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="js/base.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
